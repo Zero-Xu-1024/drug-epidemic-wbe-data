@@ -1,8 +1,8 @@
 # Source data for a drug-epidemic model for China
 
-These data support **A drug-epidemic model for China with dual treatment pathways, relapse, and flow-based calibration**. The files contain the reported national administrative indicators, numerical results and plotted curves, and observations and estimates from the synthetic wastewater experiments.
+These data support **A drug-epidemic model for China with dual treatment pathways, relapse, and wastewater observations**. The files contain the reported national administrative indicators, numerical results and plotted curves, and observations and estimates from the synthetic wastewater experiments.
 
-The national indicators cover 2008–2019; the calculations use 2012–2019 under the paper's stated annual-entry interpretation. Their source definitions include administrative orders, reporting arrivals, and treatment stocks. The wastewater experiments describe a hypothetical catchment with specified model and emission coefficients. Their observations are simulated rather than collected from a wastewater monitoring site.
+The national indicators cover 2008–2019. The 2012–2019 comparison is retained to diagnose the consequences of the original uniform annual-entry mapping. The reported quantities include administrative orders, reporting arrivals, and treatment stocks, and their pathway coverage also differs from the model. Minimizing the numerical discrepancy between these numbers and model annual-entry integrals does not provide an empirical calibration of the national drug-use process. The numerical minimizers and intervention scenarios are not estimates or projections of national outcomes. The wastewater experiments describe a hypothetical catchment with specified model and emission coefficients. Their observations are simulated rather than collected from a wastewater monitoring site.
 
 ## Files and units
 
@@ -10,7 +10,7 @@ All CSV files use UTF-8, comma delimiters, decimal points, and a header row. Emp
 
 | File | Rows | Contents | Paper figures and tables |
 |---|---:|---|---|
-| `administrative_observations.csv` | 12 | Annual reported values, source definitions, and public source links | Table 2; observed points in Figure 5 and Table S4 |
+| `administrative_observations.csv` | 12 | Annual reported values, source definitions, and public source links | Table 2; reported indicators in Figure 5 and Table S4 |
 | `numerical_results.csv` | 432 | Numerical settings, table values, annual predictions, and generating means | Table 3 and Tables S1–S7; Figures 3 and 5; Sections S6–S7 |
 | `figure_curves.csv` | 9,062 | Source points for the trajectory plots | Figures 2B, 4, and 6 |
 | `wbe_recovery_runs.csv` | 450 | Estimates from each synthetic recovery run | Figure 2A and Tables S8–S9 |
@@ -18,7 +18,7 @@ All CSV files use UTF-8, comma delimiters, decimal points, and a header row. Emp
 
 ### Administrative observations
 
-`year` identifies the reporting year. `mandatory_reported_10k` and `community_reported_10k` are the source totals divided by 10,000. Their underlying units are persons or person-times as described by `mandatory_definition` and `community_definition`; the two columns should be read with those definitions. `source_url` identifies the public report or reproduction. `source_note` records qualifications needed to interpret the value. `used_in_fit` is true for 2012–2019.
+`year` identifies the reporting year. `mandatory_reported_10k` and `community_reported_10k` are the source totals divided by 10,000. Their underlying units are persons or person-times as described by `mandatory_definition` and `community_definition`; the two columns should be read with those definitions. `source_url` identifies the public report or reproduction. `source_note` records qualifications needed to interpret the value. `used_in_fit` is a retained column name and is true for the 2012–2019 diagnostic comparison. It does not identify a homogeneous series suitable for empirical fitting.
 
 The 2008 totals cover 1 June–31 December. The 2011 indicator definitions remain unverified. The available 2015 transcription describes current treatment stocks; its original page and stock date remain unconfirmed. Community totals can include post-isolation rehabilitation as well as detoxification. These distinctions are retained in the data.
 
@@ -29,12 +29,12 @@ This is a long table with columns `block`, `case`, `entity`, `metric`, `value`, 
 | `block` | Rows | Interpretation |
 |---|---:|---|
 | `reference_parameters` | 13 | Reference model parameters; `entity` gives the parameter |
-| `fit_bounds` | 12 | Lower and upper bounds for the six estimated rates |
+| `fit_bounds` | 12 | Lower and upper bounds for the six rates in the diagnostic optimization |
 | `initial_states` | 48 | Six components of eight initial-state or equilibrium vectors |
 | `wbe_settings` | 6 | Local recruitment, emission coefficients, removal, initial wastewater mass, and relative noise scale |
 | `elasticities` | 39 | Thirteen signed elasticities at three relative perturbations |
 | `annual_predictions` | 64 | Community (`C`) and mandatory (`M`) annual integrals for 2012–2019 under four parameter/initial-state cases |
-| `hidden_stock_profile` | 48 | Six fitted rates, the relative least-squares objective, and R0 for each of six assumed hidden initial stocks |
+| `hidden_stock_profile` | 48 | Six diagnostic minimizers, the normalized numerical-discrepancy objective, and R0 for each of six assumed hidden initial stocks |
 | `intervention_endpoints` | 84 | Six state values and R0 for six strategies under each parameter set at the start of 2030 |
 | `structural_endpoints` | 33 | R0, I1(2030), and I3(2030) for the eleven structural alternatives |
 | `population_totals` | 2 | Reference-case N(2019) and N(2020) |
@@ -42,13 +42,13 @@ This is a long table with columns `block`, `case`, `entity`, `metric`, `value`, 
 | `local_jacobian` | 7 | Six singular values and the condition number of the parameter-bound-scaled residual Jacobian |
 | `wbe_generating_means` | 64 | The mean and standard deviation of each of the 32 primary synthetic observations |
 
-In `hidden_stock_profile`, `case` is the multiplier of the assumed I3(0)=1049. Its six rates and fixed reference parameters define the corresponding conditional fit. Case 1 supplies the conditional parameters in Table S3. In `annual_predictions`, the cases are `reference` and `hidden_factor_1`, `hidden_factor_2`, or `hidden_factor_8`. The reference and case-1 predictions also supply Table S4. Residuals in percent are 100 × (prediction − reported value) / reported value.
+In `hidden_stock_profile`, `case` is the multiplier of the assumed I3(0)=1049. Its six rates and fixed reference parameters define the corresponding diagnostic minimizer. Case 1 supplies the conditional minimizer of the diagnostic objective in Table S3. In `annual_predictions`, the cases are `reference` and `hidden_factor_1`, `hidden_factor_2`, or `hidden_factor_8`. The reference and case-1 predictions also supply Table S4. Diagnostic residuals in percent are 100 × (model integral − reported number) / reported number. Both numbers use the tabulated 10^4 scaling, which does not equate their measurement types.
 
 For `elasticities`, `E_h1percent`, `E_h01percent`, and `E_h001percent` correspond to h=10^-2, 10^-3, and 10^-4. Figure 3 uses h=10^-4. Each elasticity is theta/R0 times the partial derivative of R0 with respect to theta; it is dimensionless.
 
-The `initial_states` cases are `calibration_2012`, `scenario_reference_2020`, `scenario_conditional_2020`, `convergence_initial_1`, `convergence_initial_3`, `equilibrium_subcritical`, `equilibrium_supercritical`, and `wbe_generating`. Convergence initial state 2 equals `calibration_2012`. The subcritical convergence case uses the reference parameters, and the supercritical case changes only beta2 to 0.058028 year^-1.
+The `initial_states` cases are `calibration_2012`, `scenario_reference_2020`, `scenario_conditional_2020`, `convergence_initial_1`, `convergence_initial_3`, `equilibrium_subcritical`, `equilibrium_supercritical`, and `wbe_generating`. The `calibration_2012` and `scenario_conditional_2020` names are retained identifiers for the assumed diagnostic initial state and the diagnostic-parameter scenario state, respectively; they do not imply empirical calibration. Convergence initial state 2 equals `calibration_2012`. The subcritical convergence case uses the reference parameters, and the supercritical case changes only beta2 to 0.058028 year^-1.
 
-For intervention results, `case` is `reference` or `conditional`. Within each case, every strategy starts from the corresponding 2020 initial state. Strategy 1 halves beta1 and beta2; Strategy 2 doubles gamma2; Strategy 3 doubles alpha1 and gamma1; Strategy 4 halves r2; Strategy 5 halves p. Other parameters are unchanged. Percentage changes are 100 × (strategy endpoint / its case's Baseline endpoint − 1).
+For intervention results, `case` is `reference` or `conditional`; `conditional` denotes the diagnostic parameter set. These are deterministic model scenarios with prescribed rates and states. Within each case, every strategy starts from the corresponding 2020 initial state. Strategy 1 halves beta1 and beta2; Strategy 2 doubles gamma2; Strategy 3 doubles alpha1 and gamma1; Strategy 4 halves r2; Strategy 5 halves p. Other parameters are unchanged. Percentage changes are 100 × (strategy endpoint / its case's Baseline endpoint − 1).
 
 The structural alternatives start from `scenario_reference_2020` and use the reference parameters with the indicated added pathway or rate. `Cessation sigma=...` transfers I1 to R; `Cessation to S sigma=...` transfers I1 to S. Mild initiation adds beta_mild S I1/N. `Erlang2 entry_fraction=0.5` splits each treatment stock equally between two serial stages; `entry_fraction=1` places it entirely in the first stage. Stage progression and completion rates are 2r1 and 2r2, with the competing exits retained. Changes in Table S7 are calculated against the `Original` row.
 
@@ -88,4 +88,8 @@ The administrative source for each reporting year is linked in `administrative_o
 
 The demographic model parameters Lambda=400 (10^4 persons/year), mu=0.007 year^-1, and mu_d=0.025 year^-1 follow Table 3 of H. Tang, M. Li, X. Yan, Z. Lu, and Z. Jia, *Modeling the dynamics of drug spreading in China*, International Journal of Environmental Research and Public Health 18 (2021), 288, [doi:10.3390/ijerph18010288](https://doi.org/10.3390/ijerph18010288).
 
-The initial population scale N(0)=100403 (10^4 persons) follows the population section of the [National Bureau of Statistics of China, Statistical communiqué on the 2012 national economic and social development](https://www.stats.gov.cn/english/NewsEvents/201302/t20130222_26962.html), published 22 February 2013. The compartmental partition and the model's demographic balance are specified assumptions. The hypothetical catchment preserves those initial proportions and uses the corresponding scaled recruitment.
+The initial population scale N(0)=100403 (10^4 persons) follows the population section of the [National Bureau of Statistics of China, Statistical communiqué on the 2012 national economic and social development](https://www.stats.gov.cn/english/NewsEvents/201302/t20130222_26962.html), published 22 February 2013. The source population totals are for the end of 2012. Their use as a beginning-of-2012 scale, the compartmental partition, and the model's demographic balance are specified assumptions. The hypothetical catchment preserves those initial proportions and uses the corresponding scaled recruitment.
+
+## Revision note
+
+The 20 October 2026 update revises this README to match the diagnostic scope and updated article title. All five CSV files are byte-for-byte unchanged from repository snapshot `8667ff149e025a42b5c0413fb7f0e5d5f4ad0c2b`. Retained column and case names preserve compatibility with that snapshot. The repository contains source data and numerical outputs; it does not include executable calculation scripts. The procedures and numerical settings are reported in the manuscript.
