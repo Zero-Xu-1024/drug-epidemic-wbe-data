@@ -1,0 +1,433 @@
+block,case,entity,metric,value,unit
+reference_parameters,reference,Lambda,value,400.0,10^4 persons/year
+reference_parameters,reference,mu,value,0.007,year^-1
+reference_parameters,reference,mu_d,value,0.025,year^-1
+reference_parameters,reference,beta1,value,3.17e-09,year^-1
+reference_parameters,reference,beta2,value,0.029014,year^-1
+reference_parameters,reference,alpha1,value,0.36117,year^-1
+reference_parameters,reference,alpha2,value,0.23,year^-1
+reference_parameters,reference,gamma1,value,0.25544,year^-1
+reference_parameters,reference,gamma2,value,0.0179,year^-1
+reference_parameters,reference,delta,value,0.05,year^-1
+reference_parameters,reference,r1,value,0.33,year^-1
+reference_parameters,reference,r2,value,0.5,year^-1
+reference_parameters,reference,p,value,0.5,year^-1
+fit_bounds,all_fits,beta1,lower,0,year^-1
+fit_bounds,all_fits,beta1,upper,1.0,year^-1
+fit_bounds,all_fits,beta2,lower,0,year^-1
+fit_bounds,all_fits,beta2,upper,0.15,year^-1
+fit_bounds,all_fits,alpha1,lower,0,year^-1
+fit_bounds,all_fits,alpha1,upper,1.0,year^-1
+fit_bounds,all_fits,gamma1,lower,0,year^-1
+fit_bounds,all_fits,gamma1,upper,1.0,year^-1
+fit_bounds,all_fits,gamma2,lower,0,year^-1
+fit_bounds,all_fits,gamma2,upper,1.0,year^-1
+fit_bounds,all_fits,delta,lower,0,year^-1
+fit_bounds,all_fits,delta,upper,1.0,year^-1
+initial_states,calibration_2012,S,value,99094.3,10^4 persons
+initial_states,calibration_2012,I1,value,150.0,10^4 persons
+initial_states,calibration_2012,I2,value,13.6,10^4 persons
+initial_states,calibration_2012,I3,value,1049.0,10^4 persons
+initial_states,calibration_2012,I4,value,20.2,10^4 persons
+initial_states,calibration_2012,R,value,75.9,10^4 persons
+initial_states,scenario_reference_2020,S,value,96672.1645,10^4 persons
+initial_states,scenario_reference_2020,I1,value,25.9983839,10^4 persons
+initial_states,scenario_reference_2020,I2,value,372.278354,10^4 persons
+initial_states,scenario_reference_2020,I3,value,506.081735,10^4 persons
+initial_states,scenario_reference_2020,I4,value,55.2504169,10^4 persons
+initial_states,scenario_reference_2020,R,value,295.275894,10^4 persons
+initial_states,scenario_conditional_2020,S,value,95963.74735542077,10^4 persons
+initial_states,scenario_conditional_2020,I1,value,363.0459343129565,10^4 persons
+initial_states,scenario_conditional_2020,I2,value,68.3992489436488,10^4 persons
+initial_states,scenario_conditional_2020,I3,value,1291.5468250672468,10^4 persons
+initial_states,scenario_conditional_2020,I4,value,53.394549192911455,10^4 persons
+initial_states,scenario_conditional_2020,R,value,85.13911976853396,10^4 persons
+initial_states,convergence_initial_1,S,value,99748.65,10^4 persons
+initial_states,convergence_initial_1,I1,value,75.0,10^4 persons
+initial_states,convergence_initial_1,I2,value,6.8,10^4 persons
+initial_states,convergence_initial_1,I3,value,524.5,10^4 persons
+initial_states,convergence_initial_1,I4,value,10.1,10^4 persons
+initial_states,convergence_initial_1,R,value,37.95,10^4 persons
+initial_states,convergence_initial_3,S,value,97785.6,10^4 persons
+initial_states,convergence_initial_3,I1,value,300.0,10^4 persons
+initial_states,convergence_initial_3,I2,value,27.2,10^4 persons
+initial_states,convergence_initial_3,I3,value,2098.0,10^4 persons
+initial_states,convergence_initial_3,I4,value,40.4,10^4 persons
+initial_states,convergence_initial_3,R,value,151.8,10^4 persons
+initial_states,equilibrium_subcritical,S,value,57142.857142857145,10^4 persons
+initial_states,equilibrium_subcritical,I1,value,0.0,10^4 persons
+initial_states,equilibrium_subcritical,I2,value,0.0,10^4 persons
+initial_states,equilibrium_subcritical,I3,value,0.0,10^4 persons
+initial_states,equilibrium_subcritical,I4,value,0.0,10^4 persons
+initial_states,equilibrium_subcritical,R,value,0.0,10^4 persons
+initial_states,equilibrium_supercritical,S,value,30059.53458354922,10^4 persons
+initial_states,equilibrium_supercritical,I1,value,316.9387597424737,10^4 persons
+initial_states,equilibrium_supercritical,I2,value,3248.8792487047176,10^4 persons
+initial_states,equilibrium_supercritical,I3,value,4474.034988226341,10^4 persons
+initial_states,equilibrium_supercritical,I4,value,478.3613189832099,10^4 persons
+initial_states,equilibrium_supercritical,R,value,2586.411857128525,10^4 persons
+initial_states,wbe_generating,S,value,98696.55289184586,persons
+initial_states,wbe_generating,I1,value,149.39792635678216,persons
+initial_states,wbe_generating,I2,value,13.545411989681583,persons
+initial_states,wbe_generating,I3,value,1044.7894983217632,persons
+initial_states,wbe_generating,I4,value,20.118920749379996,persons
+initial_states,wbe_generating,R,value,75.59535073653178,persons
+wbe_settings,generating,Lambda,value,398.39447028475246,persons/year
+wbe_settings,generating,eta1,value,1.0,mg/(person year)
+wbe_settings,generating,eta3,value,4.0,mg/(person year)
+wbe_settings,generating,kappa,value,365.25,year^-1
+wbe_settings,generating,W0,value,0.0,mg
+wbe_settings,generating,relative_noise_sd,value,0.05,ratio
+elasticities,reference,Lambda,E_h1percent,0.0,dimensionless
+elasticities,reference,Lambda,E_h01percent,0.0,dimensionless
+elasticities,reference,Lambda,E_h001percent,0.0,dimensionless
+elasticities,reference,mu,E_h1percent,-0.4171353293707315,dimensionless
+elasticities,reference,mu,E_h01percent,-0.41712873135046447,dimensionless
+elasticities,reference,mu,E_h001percent,-0.4171286653725846,dimensionless
+elasticities,reference,mu_d,E_h1percent,-0.6094281164637433,dimensionless
+elasticities,reference,mu_d,E_h01percent,-0.6094057101414257,dimensionless
+elasticities,reference,mu_d,E_h001percent,-0.609405486083411,dimensionless
+elasticities,reference,beta1,E_h1percent,7.93388354909605e-08,dimensionless
+elasticities,reference,beta1,E_h01percent,7.933885981269e-08,dimensionless
+elasticities,reference,beta1,E_h001percent,7.933829230566865e-08,dimensionless
+elasticities,reference,beta2,E_h1percent,0.9999999206611717,dimensionless
+elasticities,reference,beta2,E_h01percent,0.9999999206612286,dimensionless
+elasticities,reference,beta2,E_h001percent,0.9999999206613907,dimensionless
+elasticities,reference,alpha1,E_h1percent,-0.0009558618771085885,dimensionless
+elasticities,reference,alpha1,E_h01percent,-0.0009558273781946172,dimensionless
+elasticities,reference,alpha1,E_h001percent,-0.0009558270343664347,dimensionless
+elasticities,reference,alpha2,E_h1percent,0.012658373038628603,dimensionless
+elasticities,reference,alpha2,E_h01percent,0.01265818776249536,dimensionless
+elasticities,reference,alpha2,E_h001percent,0.012658185909584934,dimensionless
+elasticities,reference,gamma1,E_h1percent,-0.20799629786674378,dimensionless
+elasticities,reference,gamma1,E_h01percent,-0.2079954070289937,dimensionless
+elasticities,reference,gamma1,E_h001percent,-0.20799539811767415,dimensionless
+elasticities,reference,gamma2,E_h1percent,-0.011965503506979079,dimensionless
+elasticities,reference,gamma2,E_h01percent,-0.011965503337432305,dimensionless
+elasticities,reference,gamma2,E_h001percent,-0.01196550333435155,dimensionless
+elasticities,reference,delta,E_h1percent,0.005293713835894313,dimensionless
+elasticities,reference,delta,E_h01percent,0.005293705727037811,dimensionless
+elasticities,reference,delta,E_h001percent,0.005293705643289988,dimensionless
+elasticities,reference,r1,E_h1percent,0.11448139820982105,dimensionless
+elasticities,reference,r1,E_h01percent,0.11447504578045503,dimensionless
+elasticities,reference,r1,E_h001percent,0.11447498226409633,dimensionless
+elasticities,reference,r2,E_h1percent,0.017745407759653224,dimensionless
+elasticities,reference,r2,E_h01percent,0.017743756385418974,dimensionless
+elasticities,reference,r2,E_h001percent,0.017743739873153606,dimensionless
+elasticities,reference,p,E_h1percent,0.09728809607661479,dimensionless
+elasticities,reference,p,E_h01percent,0.097280342379269,dimensionless
+elasticities,reference,p,E_h001percent,0.09728026485002693,dimensionless
+annual_predictions,reference,2012,C,283.74207600195587,10^4 events
+annual_predictions,reference,2012,M,23.810414998309334,10^4 events
+annual_predictions,reference,2013,C,223.23324943806068,10^4 events
+annual_predictions,reference,2013,M,28.6116170044184,10^4 events
+annual_predictions,reference,2014,C,184.43566529287915,10^4 events
+annual_predictions,reference,2014,M,29.974894060193648,10^4 events
+annual_predictions,reference,2015,C,161.68377584386553,10^4 events
+annual_predictions,reference,2015,M,29.8883279200207,10^4 events
+annual_predictions,reference,2016,C,149.37149610531537,10^4 events
+annual_predictions,reference,2016,M,29.33053369434738,10^4 events
+annual_predictions,reference,2017,C,143.20813860857766,10^4 events
+annual_predictions,reference,2017,M,28.72530349685283,10^4 events
+annual_predictions,reference,2018,C,140.33736261593958,10^4 events
+annual_predictions,reference,2018,M,28.21819530037274,10^4 events
+annual_predictions,reference,2019,C,139.04485725194104,10^4 events
+annual_predictions,reference,2019,M,27.83119548411642,10^4 events
+annual_predictions,hidden_factor_1,2012,C,13.348260228453789,10^4 events
+annual_predictions,hidden_factor_1,2012,M,23.887506564831334,10^4 events
+annual_predictions,hidden_factor_1,2013,C,15.566063358692439,10^4 events
+annual_predictions,hidden_factor_1,2013,M,24.194444279901823,10^4 events
+annual_predictions,hidden_factor_1,2014,C,17.7345264060246,10^4 events
+annual_predictions,hidden_factor_1,2014,M,24.572545736613165,10^4 events
+annual_predictions,hidden_factor_1,2015,C,19.869445554663926,10^4 events
+annual_predictions,hidden_factor_1,2015,M,25.078374655806883,10^4 events
+annual_predictions,hidden_factor_1,2016,C,21.99132387646938,10^4 events
+annual_predictions,hidden_factor_1,2016,M,25.73328192484152,10^4 events
+annual_predictions,hidden_factor_1,2017,C,24.120066700934103,10^4 events
+annual_predictions,hidden_factor_1,2017,M,26.542321115443798,10^4 events
+annual_predictions,hidden_factor_1,2018,C,26.273449749575747,10^4 events
+annual_predictions,hidden_factor_1,2018,M,27.503866254472143,10^4 events
+annual_predictions,hidden_factor_1,2019,C,28.467038499944408,10^4 events
+annual_predictions,hidden_factor_1,2019,M,28.614301103010348,10^4 events
+hidden_stock_profile,1,beta1,rate,0.9999999999999999,year^-1
+hidden_stock_profile,1,beta2,rate,0.06006170313757252,year^-1
+hidden_stock_profile,1,alpha1,rate,0.08147934217711965,year^-1
+hidden_stock_profile,1,gamma1,rate,8.931046565955692e-22,year^-1
+hidden_stock_profile,1,gamma2,rate,0.02262267039909158,year^-1
+hidden_stock_profile,1,delta,rate,1.8984591080491074e-17,year^-1
+hidden_stock_profile,1,objective,value,0.7485373560339785,dimensionless
+hidden_stock_profile,1,R0,value,2.5437754101658,dimensionless
+hidden_stock_profile,0.25,beta1,rate,0.9999999930912624,year^-1
+hidden_stock_profile,0.25,beta2,rate,0.08732004136135163,year^-1
+hidden_stock_profile,0.25,alpha1,rate,2.9997723506752955e-16,year^-1
+hidden_stock_profile,0.25,gamma1,rate,0.05504933281961327,year^-1
+hidden_stock_profile,0.25,gamma2,rate,0.031191138342020554,year^-1
+hidden_stock_profile,0.25,delta,rate,0.9796506328620345,year^-1
+hidden_stock_profile,0.25,objective,value,0.9250685323282614,dimensionless
+hidden_stock_profile,0.25,R0,value,3.6363869852203456,dimensionless
+hidden_stock_profile,0.5,beta1,rate,0.9999999999999688,year^-1
+hidden_stock_profile,0.5,beta2,rate,0.07928839006277327,year^-1
+hidden_stock_profile,0.5,alpha1,rate,0.09509371537806846,year^-1
+hidden_stock_profile,0.5,gamma1,rate,4.945432974551905e-17,year^-1
+hidden_stock_profile,0.5,gamma2,rate,0.03942605628168787,year^-1
+hidden_stock_profile,0.5,delta,rate,1.879044558234664e-16,year^-1
+hidden_stock_profile,0.5,objective,value,0.822605270837978,dimensionless
+hidden_stock_profile,0.5,R0,value,3.172419577378144,dimensionless
+annual_predictions,hidden_factor_2,2012,C,12.80811466127153,10^4 events
+annual_predictions,hidden_factor_2,2012,M,24.0246048161861,10^4 events
+annual_predictions,hidden_factor_2,2013,C,15.747970793719107,10^4 events
+annual_predictions,hidden_factor_2,2013,M,24.427997910333993,10^4 events
+annual_predictions,hidden_factor_2,2014,C,18.250770850605875,10^4 events
+annual_predictions,hidden_factor_2,2014,M,24.9092303757243,10^4 events
+annual_predictions,hidden_factor_2,2015,C,20.444501379862373,10^4 events
+annual_predictions,hidden_factor_2,2015,M,25.45294249447103,10^4 events
+annual_predictions,hidden_factor_2,2016,C,22.411171458710243,10^4 events
+annual_predictions,hidden_factor_2,2016,M,26.048786737428387,10^4 events
+annual_predictions,hidden_factor_2,2017,C,24.20583442186873,10^4 events
+annual_predictions,hidden_factor_2,2017,M,26.689568519511113,10^4 events
+annual_predictions,hidden_factor_2,2018,C,25.867271375975065,10^4 events
+annual_predictions,hidden_factor_2,2018,M,27.370182165134878,10^4 events
+annual_predictions,hidden_factor_2,2019,C,27.424076273559592,10^4 events
+annual_predictions,hidden_factor_2,2019,M,28.086961602571108,10^4 events
+hidden_stock_profile,2,beta1,rate,0.9999999999999999,year^-1
+hidden_stock_profile,2,beta2,rate,0.039675804559018084,year^-1
+hidden_stock_profile,2,alpha1,rate,0.0743077213309982,year^-1
+hidden_stock_profile,2,gamma1,rate,3.615963109840303e-20,year^-1
+hidden_stock_profile,2,gamma2,rate,0.010769953306929255,year^-1
+hidden_stock_profile,2,delta,rate,0.0925623704692454,year^-1
+hidden_stock_profile,2,objective,value,0.7424174208941581,dimensionless
+hidden_stock_profile,2,R0,value,1.7469551297251535,dimensionless
+hidden_stock_profile,4,beta1,rate,0.9999999999999999,year^-1
+hidden_stock_profile,4,beta2,rate,0.024018851670727044,year^-1
+hidden_stock_profile,4,alpha1,rate,0.0697347874152097,year^-1
+hidden_stock_profile,4,gamma1,rate,5.610516506929839e-19,year^-1
+hidden_stock_profile,4,gamma2,rate,0.005081146993983662,year^-1
+hidden_stock_profile,4,delta,rate,0.1817583673488525,year^-1
+hidden_stock_profile,4,objective,value,0.7439524675643071,dimensionless
+hidden_stock_profile,4,R0,value,1.1631120748207875,dimensionless
+annual_predictions,hidden_factor_8,2012,C,12.272308834623596,10^4 events
+annual_predictions,hidden_factor_8,2012,M,23.956154272954606,10^4 events
+annual_predictions,hidden_factor_8,2013,C,15.98228386422696,10^4 events
+annual_predictions,hidden_factor_8,2013,M,24.49595922706591,10^4 events
+annual_predictions,hidden_factor_8,2014,C,18.828809904911612,10^4 events
+annual_predictions,hidden_factor_8,2014,M,25.211681083845974,10^4 events
+annual_predictions,hidden_factor_8,2015,C,21.053908590210668,10^4 events
+annual_predictions,hidden_factor_8,2015,M,25.907972042107204,10^4 events
+annual_predictions,hidden_factor_8,2016,C,22.808888301301664,10^4 events
+annual_predictions,hidden_factor_8,2016,M,26.508195024810036,10^4 events
+annual_predictions,hidden_factor_8,2017,C,24.1954982121957,10^4 events
+annual_predictions,hidden_factor_8,2017,M,26.99014171807383,10^4 events
+annual_predictions,hidden_factor_8,2018,C,25.286770012868146,10^4 events
+annual_predictions,hidden_factor_8,2018,M,27.3554345324236,10^4 events
+annual_predictions,hidden_factor_8,2019,C,26.137881084629356,10^4 events
+annual_predictions,hidden_factor_8,2019,M,27.615143772692875,10^4 events
+hidden_stock_profile,8,beta1,rate,0.9999999999999997,year^-1
+hidden_stock_profile,8,beta2,rate,0.013928481490606786,year^-1
+hidden_stock_profile,8,alpha1,rate,0.06692464336389999,year^-1
+hidden_stock_profile,8,gamma1,rate,4.1333294368714003e-16,year^-1
+hidden_stock_profile,8,gamma2,rate,0.002444304708374698,year^-1
+hidden_stock_profile,8,delta,rate,0.24444558507523598,year^-1
+hidden_stock_profile,8,objective,value,0.747506241132003,dimensionless
+hidden_stock_profile,8,R0,value,0.8000612468340441,dimensionless
+intervention_endpoints,reference,Baseline,R0,0.6847105745246779,dimensionless
+intervention_endpoints,reference,Baseline,S,93862.16988208116,10^4 persons
+intervention_endpoints,reference,Baseline,I1,23.449482362036516,10^4 persons
+intervention_endpoints,reference,Baseline,I2,346.9853696366233,10^4 persons
+intervention_endpoints,reference,Baseline,I3,485.1084010877259,10^4 persons
+intervention_endpoints,reference,Baseline,I4,51.91020121792263,10^4 persons
+intervention_endpoints,reference,Baseline,R,280.1064568760257,10^4 persons
+intervention_endpoints,reference,Strategy 1,R0,0.34235528726233894,dimensionless
+intervention_endpoints,reference,Strategy 1,S,93932.17258380489,10^4 persons
+intervention_endpoints,reference,Strategy 1,I1,11.366285025347198,10^4 persons
+intervention_endpoints,reference,Strategy 1,I2,326.66236870644747,10^4 persons
+intervention_endpoints,reference,Strategy 1,I3,464.23178591225667,10^4 persons
+intervention_endpoints,reference,Strategy 1,I4,49.72089498202527,10^4 persons
+intervention_endpoints,reference,Strategy 1,R,267.7449553332871,10^4 persons
+intervention_endpoints,reference,Strategy 2,R0,0.6766145409783645,dimensionless
+intervention_endpoints,reference,Strategy 2,S,93865.77748507702,10^4 persons
+intervention_endpoints,reference,Strategy 2,I1,22.765060650141212,10^4 persons
+intervention_endpoints,reference,Strategy 2,I2,337.1618440378893,10^4 persons
+intervention_endpoints,reference,Strategy 2,I3,471.02398539177955,10^4 persons
+intervention_endpoints,reference,Strategy 2,I4,67.19344942342815,10^4 persons
+intervention_endpoints,reference,Strategy 2,R,288.956535387732,10^4 persons
+intervention_endpoints,reference,Strategy 3,R0,0.5664777457310065,dimensionless
+intervention_endpoints,reference,Strategy 3,S,93904.34721455934,10^4 persons
+intervention_endpoints,reference,Strategy 3,I1,9.595785258532985,10^4 persons
+intervention_endpoints,reference,Strategy 3,I2,446.65858322004266,10^4 persons
+intervention_endpoints,reference,Strategy 3,I3,319.52134250536085,10^4 persons
+intervention_endpoints,reference,Strategy 3,I4,56.06444709271016,10^4 persons
+intervention_endpoints,reference,Strategy 3,R,350.3520895639995,10^4 persons
+intervention_endpoints,reference,Strategy 4,R0,0.6729204743474863,dimensionless
+intervention_endpoints,reference,Strategy 4,S,93865.99776610146,10^4 persons
+intervention_endpoints,reference,Strategy 4,I1,22.536140457672573,10^4 persons
+intervention_endpoints,reference,Strategy 4,I2,334.4611500481924,10^4 persons
+intervention_endpoints,reference,Strategy 4,I3,465.25541160741125,10^4 persons
+intervention_endpoints,reference,Strategy 4,I4,96.62484215905623,10^4 persons
+intervention_endpoints,reference,Strategy 4,R,268.1951677054169,10^4 persons
+intervention_endpoints,reference,Strategy 5,R0,0.6243088585846399,dimensionless
+intervention_endpoints,reference,Strategy 5,S,93887.19072274074,10^4 persons
+intervention_endpoints,reference,Strategy 5,I1,18.796897088584448,10^4 persons
+intervention_endpoints,reference,Strategy 5,I2,279.92488915286333,10^4 persons
+intervention_endpoints,reference,Strategy 5,I3,390.0440195993879,10^4 persons
+intervention_endpoints,reference,Strategy 5,I4,42.245402643793255,10^4 persons
+intervention_endpoints,reference,Strategy 5,R,453.36474079413114,10^4 persons
+intervention_endpoints,conditional,Baseline,R0,2.5437754101658,dimensionless
+intervention_endpoints,conditional,Baseline,S,91414.09263388615,10^4 persons
+intervention_endpoints,conditional,Baseline,I1,697.2603903999502,10^4 persons
+intervention_endpoints,conditional,Baseline,I2,142.3995114475272,10^4 persons
+intervention_endpoints,conditional,Baseline,I3,2168.2124142563102,10^4 persons
+intervention_endpoints,conditional,Baseline,I4,87.2472868445486,10^4 persons
+intervention_endpoints,conditional,Baseline,R,160.00086895244323,10^4 persons
+intervention_endpoints,conditional,Strategy 1,R0,1.2718877050829,dimensionless
+intervention_endpoints,conditional,Strategy 1,S,92591.0275477568,10^4 persons
+intervention_endpoints,conditional,Strategy 1,I1,250.36484082983043,10^4 persons
+intervention_endpoints,conditional,Strategy 1,I2,62.995612844980556,10^4 persons
+intervention_endpoints,conditional,Strategy 1,I3,1631.603517102003,10^4 persons
+intervention_endpoints,conditional,Strategy 1,I4,70.48476636123195,10^4 persons
+intervention_endpoints,conditional,Strategy 1,R,109.25973704256162,10^4 persons
+intervention_endpoints,conditional,Strategy 2,R0,2.5104689902884703,dimensionless
+intervention_endpoints,conditional,Strategy 2,S,91480.05163303172,10^4 persons
+intervention_endpoints,conditional,Strategy 2,I1,668.3889270006517,10^4 persons
+intervention_endpoints,conditional,Strategy 2,I2,137.8014307192293,10^4 persons
+intervention_endpoints,conditional,Strategy 2,I3,2017.7841170196632,10^4 persons
+intervention_endpoints,conditional,Strategy 2,I4,162.70128798870448,10^4 persons
+intervention_endpoints,conditional,Strategy 2,R,224.45176776692347,10^4 persons
+intervention_endpoints,conditional,Strategy 3,R0,2.992299884934087,dimensionless
+intervention_endpoints,conditional,Strategy 3,S,90406.85393844756,10^4 persons
+intervention_endpoints,conditional,Strategy 3,I1,973.2149106431738,10^4 persons
+intervention_endpoints,conditional,Strategy 3,I2,357.4205828026159,10^4 persons
+intervention_endpoints,conditional,Strategy 3,I3,2537.0851125022728,10^4 persons
+intervention_endpoints,conditional,Strategy 3,I4,97.35944475712391,10^4 persons
+intervention_endpoints,conditional,Strategy 3,R,273.6699710141482,10^4 persons
+intervention_endpoints,conditional,Strategy 4,R0,2.52753166547236,dimensionless
+intervention_endpoints,conditional,Strategy 4,S,91432.84822478438,10^4 persons
+intervention_endpoints,conditional,Strategy 4,I1,688.2593547598544,10^4 persons
+intervention_endpoints,conditional,Strategy 4,I2,141.0853192832022,10^4 persons
+intervention_endpoints,conditional,Strategy 4,I3,2114.1284621451605,10^4 persons
+intervention_endpoints,conditional,Strategy 4,I4,151.38152401742778,10^4 persons
+intervention_endpoints,conditional,Strategy 4,R,148.02739601870692,10^4 persons
+intervention_endpoints,conditional,Strategy 5,R0,2.5213928465939324,dimensionless
+intervention_endpoints,conditional,Strategy 5,S,91461.62757568051,10^4 persons
+intervention_endpoints,conditional,Strategy 5,I1,676.0288830213651,10^4 persons
+intervention_endpoints,conditional,Strategy 5,I2,139.09260774587054,10^4 persons
+intervention_endpoints,conditional,Strategy 5,I3,2052.2601321281004,10^4 persons
+intervention_endpoints,conditional,Strategy 5,I4,82.9299068379332,10^4 persons
+intervention_endpoints,conditional,Strategy 5,R,273.23737139131526,10^4 persons
+structural_endpoints,Original,R0,value,0.6847105745246779,dimensionless
+structural_endpoints,Original,I1_2030,value,23.449482362036516,10^4 persons
+structural_endpoints,Original,I3_2030,value,485.1084010877259,10^4 persons
+structural_endpoints,Cessation sigma=0.05,R0,value,0.6856961410997291,dimensionless
+structural_endpoints,Cessation sigma=0.05,I1_2030,value,21.679196790073643,10^4 persons
+structural_endpoints,Cessation sigma=0.05,I3_2030,value,486.29909622549866,10^4 persons
+structural_endpoints,Cessation sigma=0.10,R0,value,0.6865405434060418,dimensionless
+structural_endpoints,Cessation sigma=0.10,I1_2030,value,20.15667536716072,10^4 persons
+structural_endpoints,Cessation sigma=0.10,I3_2030,value,487.326596904797,10^4 persons
+structural_endpoints,Cessation to S sigma=0.05,R0,value,0.6318918252363216,dimensionless
+structural_endpoints,Cessation to S sigma=0.05,I1_2030,value,21.50865167413577,10^4 persons
+structural_endpoints,Cessation to S sigma=0.05,I3_2030,value,481.7290927011505,10^4 persons
+structural_endpoints,Cessation to S sigma=0.10,R0,value,0.5866383894516044,dimensionless
+structural_endpoints,Cessation to S sigma=0.10,I1_2030,value,19.855372458686947,10^4 persons
+structural_endpoints,Cessation to S sigma=0.10,I3_2030,value,478.7581177831363,10^4 persons
+structural_endpoints,Mild initiation beta_mild=beta2/2,R0,value,0.7089628773817251,dimensionless
+structural_endpoints,Mild initiation beta_mild=beta2/2,I1_2030,value,24.06872612799709,10^4 persons
+structural_endpoints,Mild initiation beta_mild=beta2/2,I3_2030,value,486.16304573657396,10^4 persons
+structural_endpoints,Mild initiation beta_mild=beta2,R0,value,0.7332151802387725,dimensionless
+structural_endpoints,Mild initiation beta_mild=beta2,I1_2030,value,24.71986720299894,10^4 persons
+structural_endpoints,Mild initiation beta_mild=beta2,I3_2030,value,487.26028536538666,10^4 persons
+structural_endpoints,Relapse p=0.30,R0,value,0.6431518459687108,dimensionless
+structural_endpoints,Relapse p=0.30,I1_2030,value,20.137903685544003,10^4 persons
+structural_endpoints,Relapse p=0.30,I3_2030,value,417.6292075892223,10^4 persons
+structural_endpoints,Relapse p=0.69,R0,value,0.703586265832805,dimensionless
+structural_endpoints,Relapse p=0.69,I1_2030,value,25.123303676470375,10^4 persons
+structural_endpoints,Relapse p=0.69,I3_2030,value,519.3554977656893,10^4 persons
+structural_endpoints,Erlang2 entry_fraction=0.5,R0,value,0.6813190605030228,dimensionless
+structural_endpoints,Erlang2 entry_fraction=0.5,I1_2030,value,23.201488526687626,10^4 persons
+structural_endpoints,Erlang2 entry_fraction=0.5,I3_2030,value,479.8023786817449,10^4 persons
+structural_endpoints,Erlang2 entry_fraction=1,R0,value,0.6813190605030228,dimensionless
+structural_endpoints,Erlang2 entry_fraction=1,I1_2030,value,23.1403723610386,10^4 persons
+structural_endpoints,Erlang2 entry_fraction=1,I3_2030,value,480.432286996512,10^4 persons
+population_totals,reference,2019,N,98226.25156045538,10^4 persons
+population_totals,reference,2020,N,97927.04968976825,10^4 persons
+convergence_checks,subcritical,1,scaled_endpoint_error,1.0827282594717093e-09,dimensionless
+convergence_checks,subcritical,1,max_abs_endpoint_derivative,1.2039436114719138e-10,10^4 persons/year
+convergence_checks,subcritical,2,scaled_endpoint_error,1.2210748755681286e-09,dimensionless
+convergence_checks,subcritical,2,max_abs_endpoint_derivative,1.1647216524579562e-10,10^4 persons/year
+convergence_checks,subcritical,3,scaled_endpoint_error,2.4939814929791252e-09,dimensionless
+convergence_checks,subcritical,3,max_abs_endpoint_derivative,2.2504309526993893e-10,10^4 persons/year
+convergence_checks,supercritical,1,scaled_endpoint_error,5.216037863526909e-12,dimensionless
+convergence_checks,supercritical,1,max_abs_endpoint_derivative,1.5849650480959099e-09,10^4 persons/year
+convergence_checks,supercritical,2,scaled_endpoint_error,2.3557252884023295e-12,dimensionless
+convergence_checks,supercritical,2,max_abs_endpoint_derivative,4.001208253612276e-10,10^4 persons/year
+convergence_checks,supercritical,3,scaled_endpoint_error,5.67845436614279e-13,dimensionless
+convergence_checks,supercritical,3,max_abs_endpoint_derivative,2.0605739337042905e-11,10^4 persons/year
+local_jacobian,conditional,singular_value_1,value,199.43145868068748,dimensionless
+local_jacobian,conditional,singular_value_2,value,116.43722648997297,dimensionless
+local_jacobian,conditional,singular_value_3,value,4.64572570327867,dimensionless
+local_jacobian,conditional,singular_value_4,value,1.7306890763763858,dimensionless
+local_jacobian,conditional,singular_value_5,value,0.2705085948848744,dimensionless
+local_jacobian,conditional,singular_value_6,value,0.05672217603926238,dimensionless
+local_jacobian,conditional,condition_number,value,3515.934553403655,dimensionless
+wbe_generating_means,community_annual,1,mean,282.6031855431903,events
+wbe_generating_means,community_annual,1,noise_sd,14.130159277159516,events
+wbe_generating_means,community_annual,2,mean,222.33723309604113,events
+wbe_generating_means,community_annual,2,noise_sd,11.116861654802058,events
+wbe_generating_means,community_annual,3,mean,183.6953718695304,events
+wbe_generating_means,community_annual,3,noise_sd,9.18476859347652,events
+wbe_generating_means,community_annual,4,mean,161.03480382881992,events
+wbe_generating_means,community_annual,4,noise_sd,8.051740191440997,events
+wbe_generating_means,community_annual,5,mean,148.7719427490283,events
+wbe_generating_means,community_annual,5,noise_sd,7.438597137451416,events
+wbe_generating_means,community_annual,6,mean,142.6333232845783,events
+wbe_generating_means,community_annual,6,noise_sd,7.131666164228915,events
+wbe_generating_means,community_annual,7,mean,139.7740711440647,events
+wbe_generating_means,community_annual,7,noise_sd,6.988703557203235,events
+wbe_generating_means,community_annual,8,mean,138.48675697510203,events
+wbe_generating_means,community_annual,8,noise_sd,6.924337848755101,events
+wbe_generating_means,mandatory_annual,1,mean,23.714844329984786,events
+wbe_generating_means,mandatory_annual,1,noise_sd,1.1857422164992393,events
+wbe_generating_means,mandatory_annual,2,mean,28.49677552213422,events
+wbe_generating_means,mandatory_annual,2,noise_sd,1.4248387761067112,events
+wbe_generating_means,mandatory_annual,3,mean,29.854580305268435,events
+wbe_generating_means,mandatory_annual,3,noise_sd,1.4927290152634218,events
+wbe_generating_means,mandatory_annual,4,mean,29.768361615345967,events
+wbe_generating_means,mandatory_annual,4,noise_sd,1.4884180807672984,events
+wbe_generating_means,mandatory_annual,5,mean,29.212806153557423,events
+wbe_generating_means,mandatory_annual,5,noise_sd,1.4606403076778713,events
+wbe_generating_means,mandatory_annual,6,mean,28.61000518046029,events
+wbe_generating_means,mandatory_annual,6,noise_sd,1.4305002590230147,events
+wbe_generating_means,mandatory_annual,7,mean,28.104932149278994,events
+wbe_generating_means,mandatory_annual,7,noise_sd,1.4052466074639498,events
+wbe_generating_means,mandatory_annual,8,mean,27.71948546548373,events
+wbe_generating_means,mandatory_annual,8,noise_sd,1.3859742732741864,events
+wbe_generating_means,wastewater_outflow_mg_per_year,0.25,mean,4077.0999642435186,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,0.25,noise_sd,203.85499821217593,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,0.75,mean,3619.5175195318366,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,0.75,noise_sd,180.97587597659185,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,1.25,mean,3235.922980147702,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,1.25,noise_sd,161.7961490073851,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,1.75,mean,2925.2417267727333,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,1.75,noise_sd,146.26208633863666,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,2.25,mean,2680.9072889371027,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,2.25,noise_sd,134.04536444685513,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,2.75,mean,2493.7889184007195,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,2.75,noise_sd,124.68944592003598,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,3.25,mean,2354.049306968946,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,3.25,noise_sd,117.7024653484473,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,3.75,mean,2252.250142950747,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,3.75,noise_sd,112.61250714753736,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,4.25,mean,2179.944518290794,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,4.25,noise_sd,108.9972259145397,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,4.75,mean,2129.9320236656413,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,4.75,noise_sd,106.49660118328207,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,5.25,mean,2096.3026268376016,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,5.25,noise_sd,104.81513134188009,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,5.75,mean,2074.3575200130813,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,5.75,noise_sd,103.71787600065407,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,6.25,mean,2060.466664851043,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,6.25,noise_sd,103.02333324255216,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,6.75,mean,2051.901831379107,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,6.75,noise_sd,102.59509156895535,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,7.25,mean,2046.6691458628447,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,7.25,noise_sd,102.33345729314225,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,7.75,mean,2043.354730383414,mg/year
+wbe_generating_means,wastewater_outflow_mg_per_year,7.75,noise_sd,102.16773651917072,mg/year
